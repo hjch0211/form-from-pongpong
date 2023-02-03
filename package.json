@@ -1,0 +1,22 @@
+{
+  "name": "form-from-pongpong",
+  "version": "1.0.0",
+  "description": "Form a lot of forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjch0211/form-from-pongpong.git"
+  },
+  "keywords": [
+    "form"
+  ],
+  "author": "jchan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hjch0211/form-from-pongpong/issues"
+  },
+  "homepage": "https://github.com/hjch0211/form-from-pongpong#readme"
+}
