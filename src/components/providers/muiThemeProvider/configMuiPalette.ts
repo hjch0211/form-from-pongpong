@@ -6,6 +6,6 @@ export const configMuiPalette: PaletteOptions = {
     main: myColor.primary,
   },
   text: {
-    primary: myColor.primary,
+    primary: myColor.text,
   },
 };
