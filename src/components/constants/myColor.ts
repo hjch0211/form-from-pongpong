@@ -10,11 +10,12 @@ const originColor = {
   pastelYellow: "#F3EFE0",
   turquoise: "#22A39F",
   blue: "#1932B9",
+  lightBlue: "#7584D5",
 };
 
 export const myColor = {
   ...originColor,
-  backGround: originColor.grey1,
-  text: originColor.grey2,
-  primary: originColor.blue,
+  backGround: originColor.grey3,
+  text: originColor.grey1,
+  primary: originColor.lightBlue,
 };
