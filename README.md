@@ -1,11 +1,11 @@
-# form-from-pongpong
+# form-from-styrofoam
 
 여러가지 Form 구현
 
 <img src=
-'https://img.danawa.com/prod_img/500000/890/719/img/2719890_1.jpg?shrink=500:500&_v=20171122173134' width="300" height="300" />
+'./src/assets/potato_rice_cake_box.png' width="300" />
 
-가상으로 퐁퐁 주문 구현
+가상으로 스티로폼 주문 구현
 
 ## Stack
 
