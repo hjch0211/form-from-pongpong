@@ -1,6 +1,12 @@
 import { TypographyOptions } from "@mui/material/styles/createTypography";
+import { myColor } from "../../constants/myColor";
 
 export const configMuiTypography: TypographyOptions = {
+  h1: {
+    fontSize: 60,
+    fontWeight: 700,
+    color: myColor.primary,
+  },
   subtitle1: {
     fontSize: 20,
   },
