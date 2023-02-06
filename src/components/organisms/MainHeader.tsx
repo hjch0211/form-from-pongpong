@@ -7,6 +7,7 @@ export const MainHeader = () => {
     <div>
       <Empty height="1rem" />
       <Typography variant="h1">폼 프롬 스티로폼</Typography>
+      <Empty height="1rem" />
     </div>
   );
 };
