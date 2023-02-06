@@ -6,6 +6,7 @@ export const configMuiTypography: TypographyOptions = {
     fontSize: 60,
     fontWeight: 700,
     color: myColor.primary,
+    letterSpacing: -5,
   },
   subtitle1: {
     fontSize: 20,

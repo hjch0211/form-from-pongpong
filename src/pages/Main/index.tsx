@@ -1,10 +1,11 @@
 import React from "react";
 import { Typography } from "@mui/material";
+import { MainLayout } from "../../components/templates";
 
 export const Main = () => {
   return (
-    <>
-      <Typography variant="h1">퐁퐁</Typography>
-    </>
+    <MainLayout>
+      <Typography variant="h1">스티로폼</Typography>
+    </MainLayout>
   );
 };
