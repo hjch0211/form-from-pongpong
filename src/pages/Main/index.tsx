@@ -7,6 +7,7 @@ export const Main = () => {
   return (
     <MainLayout>
       <MainHeader />
+      <Typography>스티로폼</Typography>
     </MainLayout>
   );
 };

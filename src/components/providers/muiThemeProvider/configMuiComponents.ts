@@ -5,7 +5,7 @@ export const configMuiComponents: Components = {
   // default css setting
   MuiCssBaseline: {
     styleOverrides: {
-      "html, body, #root": { height: "100%", width: "100%", backgroundColor: myColor.backGround },
+      "html, body": { height: "100%", width: "100%", backgroundColor: myColor.backGround },
     },
   },
 };
