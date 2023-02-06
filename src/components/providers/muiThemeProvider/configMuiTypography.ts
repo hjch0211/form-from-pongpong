@@ -3,10 +3,9 @@ import { myColor } from "../../constants/myColor";
 
 export const configMuiTypography: TypographyOptions = {
   h1: {
-    fontSize: 60,
-    fontWeight: 700,
+    fontSize: 40,
     color: myColor.primary,
-    letterSpacing: -5,
+    fontFamily: "Jua",
   },
   subtitle1: {
     fontSize: 20,
