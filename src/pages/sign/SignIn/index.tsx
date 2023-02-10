@@ -17,17 +17,20 @@ export const SignIn = () => {
           <Typography variant="h1">Sign In</Typography>
         </MainLayout.Title>
         <MainLayout.Body>
-          <Form onSubmit={onSubmit}>
+          <Form
+            style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+            onSubmit={onSubmit}
+          >
             <IdField useControllerProps={reg.email} setValue={setValue} />
             <Empty height="3rem" />
             <PwField useControllerProps={reg.password} />
-            <Empty height="1rem" />
             <SaveIdCheckBox toggleSaveId={toggleSaveId} />
             <Empty height="2rem" />
-            <Button variant="contained" type="submit" style={{ width: "50%" }}>
-              Sign
+            <Button variant="outlined" type="submit" sx={{ width: "60%", height: 60 }}>
+              로그인
             </Button>
           </Form>
+          {/* [Todo] 회원가입, 아이디 찾기, 비밀번호 찾기 구현하기 */}
         </MainLayout.Body>
       </MainLayout>
     </>
