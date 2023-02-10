@@ -9,13 +9,17 @@ export const Main = () => {
   const navigate = useNavigate();
 
   return (
-    <MainLayout>
+    <>
       <MainHeader />
-      <Typography>원하는 스티로폼을 구매해 보세요</Typography>
-      <Empty height="2rem" />
-      <Button size="large" variant="outlined" onClick={() => navigate("/sign-in")}>
-        Sign in
-      </Button>
-    </MainLayout>
+      <MainLayout>
+        <MainLayout.Body>
+          <Typography>원하는 스티로폼을 구매해 보세요</Typography>
+          <Empty height="2rem" />
+          <Button size="large" variant="outlined" onClick={() => navigate("/sign-in")}>
+            Sign in
+          </Button>
+        </MainLayout.Body>
+      </MainLayout>
+    </>
   );
 };

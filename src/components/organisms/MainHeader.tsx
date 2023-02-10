@@ -1,6 +1,5 @@
 import React from "react";
 import { AppBar, Toolbar, Box } from "@mui/material";
-import { Empty } from "../atoms";
 import { Subtitle } from "../molecules";
 
 type Props = {
@@ -25,7 +24,6 @@ export const MainHeader = ({ heading }: Props) => {
           </Box>
         </Toolbar>
       </AppBar>
-      <Empty height="2rem" />
     </>
   );
 };
