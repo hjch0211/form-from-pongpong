@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Typography, Button } from "@mui/material";
 import { MainHeader } from "../../components/organisms";
-import { MainLayout } from "../../components/templates";
+import { MainLayout } from "../../components/templates/MainLayout";
 import { Empty } from "../../components/atoms";
 
 export const Main = () => {

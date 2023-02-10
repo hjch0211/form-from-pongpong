@@ -1,2 +1,2 @@
 export { InputControlled } from "./InputControlled";
-export { Subtitle } from "./Subtitle";
+export { Title } from "./Title";

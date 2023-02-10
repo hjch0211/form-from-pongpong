@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Box } from "@mui/material";
-import { Subtitle } from "../molecules";
+import { Title } from "../molecules";
 
 type Props = {
   heading?: React.ReactNode;
@@ -11,7 +11,7 @@ export const MainHeader = ({ heading }: Props) => {
     <>
       <AppBar position="static">
         <Toolbar variant="dense" sx={{ display: "flex", justifyContent: "space-between" }}>
-          {!!heading && <Subtitle />}
+          {!!heading && <Title />}
 
           <Box
             sx={{
@@ -20,7 +20,7 @@ export const MainHeader = ({ heading }: Props) => {
               transform: "translate(-50%)",
             }}
           >
-            {!!heading ? heading : <Subtitle />}
+            {!!heading ? heading : <Title />}
           </Box>
         </Toolbar>
       </AppBar>

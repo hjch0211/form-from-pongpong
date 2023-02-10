@@ -1,6 +1,6 @@
 import React from "react";
 import { Empty, Form } from "../../../components/atoms";
-import { MainLayout } from "../../../components/templates";
+import { MainLayout } from "../../../components/templates/MainLayout";
 import { MainHeader } from "../../../components/organisms";
 import { Button, Typography } from "@mui/material";
 import { useSignIn } from "./hook";
@@ -14,7 +14,7 @@ export const SignIn = () => {
       <MainHeader />
       <MainLayout>
         <MainLayout.Title>
-          <Typography variant="h1">hohossssss</Typography>
+          <Typography variant="h1">Sign In</Typography>
         </MainLayout.Title>
         <MainLayout.Body>
           <Form onSubmit={onSubmit}>
