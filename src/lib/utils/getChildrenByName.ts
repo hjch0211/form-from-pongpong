@@ -2,6 +2,7 @@ import React from "react";
 
 /**
  * @description Find the component with "type.name" in the children array.
+ * @returns Array
  */
 export const getChildrenByName = (children: React.ReactNode, typeName: string) => {
   return React.Children.toArray(children).filter((element) => {
