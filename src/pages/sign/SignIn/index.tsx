@@ -11,7 +11,8 @@ export const SignIn = () => {
 
   return (
     <MainLayout>
-      <MainHeader heading={<Typography variant="h1">Sign in</Typography>} />
+      <MainHeader />
+      {/* MainLayout.Header로 ㄱㄱ */}
       <Form onSubmit={onSubmit}>
         <IdField useControllerProps={reg.email} setValue={setValue} />
         <Empty height="3rem" />
