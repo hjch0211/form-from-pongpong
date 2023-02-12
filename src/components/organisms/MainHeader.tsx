@@ -1,35 +1,39 @@
 import React from "react";
-import { AppBar, Toolbar, Box, Button, Typography } from "@mui/material";
+import { Toolbar, Button, Typography, Divider, Stack } from "@mui/material";
 import { Title } from "../molecules";
 import PortraitIcon from "@mui/icons-material/Portrait";
 
 type Props = {
-  heading?: React.ReactNode;
+  menu?: React.ReactNode[];
 };
 
-export const MainHeader = ({ heading }: Props) => {
+export const MainHeader = ({ menu }: Props) => {
   return (
     <>
-      <AppBar position="static">
-        <Toolbar variant="dense" sx={{ display: "flex", justifyContent: "space-between" }}>
-          {!!heading && <Title />}
+      <Toolbar
+        variant="dense"
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Title />
 
-          <Box
-            sx={{
-              position: "absolute",
-              left: "50%",
-              transform: "translate(-50%)",
-            }}
-          >
-            {!!heading ? heading : <Title />}
-          </Box>
-          <Button>
-            <PortraitIcon />
-            &nbsp;
-            <Typography>내 정보</Typography>
-          </Button>
-        </Toolbar>
-      </AppBar>
+        <Stack
+          direction="row"
+          divider={<Divider orientation="vertical" flexItem />}
+          spacing={2}
+          sx={{ marginLeft: 2, flexGrow: 1 }}
+        >
+          {menu}
+        </Stack>
+
+        <Button>
+          <PortraitIcon />
+          &nbsp;
+          <Typography>내 정보</Typography>
+        </Button>
+      </Toolbar>
     </>
   );
 };
