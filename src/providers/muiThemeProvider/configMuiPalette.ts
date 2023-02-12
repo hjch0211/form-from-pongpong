@@ -1,5 +1,5 @@
 import { PaletteOptions } from "@mui/material";
-import { myColor } from "../../constants/myColor";
+import { myColor } from "../../components/constants/myColor";
 
 export const configMuiPalette: PaletteOptions = {
   mode: "dark",

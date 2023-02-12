@@ -1,6 +1,7 @@
 import React from "react";
-import { AppBar, Toolbar, Box } from "@mui/material";
+import { AppBar, Toolbar, Box, Button, Typography } from "@mui/material";
 import { Title } from "../molecules";
+import PortraitIcon from "@mui/icons-material/Portrait";
 
 type Props = {
   heading?: React.ReactNode;
@@ -22,6 +23,11 @@ export const MainHeader = ({ heading }: Props) => {
           >
             {!!heading ? heading : <Title />}
           </Box>
+          <Button>
+            <PortraitIcon />
+            &nbsp;
+            <Typography>내 정보</Typography>
+          </Button>
         </Toolbar>
       </AppBar>
     </>

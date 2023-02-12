@@ -1,5 +1,5 @@
 import { Components } from "@mui/material";
-import { myColor } from "../../constants/myColor";
+import { myColor } from "../../components/constants/myColor";
 
 export const configMuiComponents: Components = {
   // default css setting

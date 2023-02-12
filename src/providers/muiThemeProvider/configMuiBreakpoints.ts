@@ -1,5 +1,5 @@
 import { BreakpointsOptions } from "@mui/material";
-import { breakPoints } from "../../constants/breakPoints";
+import { breakPoints } from "../../components/constants/breakPoints";
 
 export const configMuiBreakpoints: BreakpointsOptions = {
   values: {
