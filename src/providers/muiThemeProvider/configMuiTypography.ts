@@ -10,5 +10,5 @@ export const configMuiTypography: TypographyOptions = {
     letterSpacing: "2px",
   },
   body2: { fontSize: 16, fontWeight: 500 },
-  button: { fontFamily: "Jua", fontSize: 30, letterSpacing: "2px" },
+  button: { fontFamily: "Jua", fontSize: 26, letterSpacing: "2px" },
 };

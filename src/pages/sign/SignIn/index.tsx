@@ -2,14 +2,14 @@ import React from "react";
 import { Empty, Form } from "../../../components/atoms";
 import { MainLayout } from "../../../components/templates/MainLayout";
 import { MainHeader } from "../../../components/organisms";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Stack, Divider, ButtonProps } from "@mui/material";
 import { useSignIn } from "./hook";
 import { IdField, PwField, SaveIdCheckBox } from "./components";
+import styled from "@emotion/styled";
 
 export const SignIn = () => {
   const { reg, onSubmit, setValue, toggleSaveId } = useSignIn();
 
-  // [Todo!!!!!!!!!!!!!!!!!!!!!!!!!!!!] 지금 index.css 폰트 적용이 안되는 중
   return (
     <>
       <MainHeader />
@@ -31,7 +31,15 @@ export const SignIn = () => {
               로그인
             </Button>
           </Form>
-          {/* [Todo] 회원가입, 아이디 찾기, 비밀번호 찾기 구현하기 */}
+
+          <Empty height="2rem" />
+
+          <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={2}>
+            {/* [Todo] 리펙터링 하기 */}
+            <Button style={{ fontSize: 15 }}>회원가입</Button>
+            <Button style={{ fontSize: 15 }}>아이디 찾기</Button>
+            <Button style={{ fontSize: 15 }}>비밀번호 찾기</Button>
+          </Stack>
         </MainLayout.Body>
       </MainLayout>
     </>
