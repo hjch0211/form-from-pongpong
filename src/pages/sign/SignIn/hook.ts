@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { isEmail, isRequired } from "../../../lib/utils/validation";
 import { createControlledReg } from "../../../lib/utils/createControlledReg";
 
@@ -8,6 +9,7 @@ const PW = "password";
 
 export const useSignIn = () => {
   const { control, handleSubmit, setValue, getValues } = useForm();
+  const navigate = useNavigate();
   const [isChecked, setIsChecked] = React.useState(false);
   const createReg = createControlledReg(control);
 
@@ -34,5 +36,5 @@ export const useSignIn = () => {
     savedId && setValue(ID, savedId);
   }, [setValue]);
 
-  return { reg, onSubmit, setValue, toggleSaveId };
+  return { reg, onSubmit, setValue, toggleSaveId, navigate };
 };
