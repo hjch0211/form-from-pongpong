@@ -4,7 +4,8 @@
 const originColor = {
   grey1: "#F2F2F2",
   grey2: "#434242",
-  grey3: "#222222",
+  grey3: "#333333",
+  grey4: "#222222",
   white: "#FFFFFF",
   black: "#000000",
   pastelYellow: "#F3EFE0",
