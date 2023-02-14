@@ -2,6 +2,7 @@ const RFC5322 =
   // eslint-disable-next-line no-useless-escape
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const email = RFC5322;
+const domain = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z0-9]{2,})+(?:\:[0-9]{1,})*$/;
 const engAndNum = /(?=.*[A-Za-z])(?=.*\d)/;
 const specialCharacters = /(?=.*[$@$!%*#?&])/;
 
@@ -37,4 +38,8 @@ export const isSpecialCharactors: Validations = (value) => {
 
 export const isEmail: Validations = (value) => {
   return email.test(value);
+};
+
+export const isDomain: Validations = (value) => {
+  return domain.test(value);
 };
