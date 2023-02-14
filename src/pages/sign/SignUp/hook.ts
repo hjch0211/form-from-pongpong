@@ -16,7 +16,12 @@ const PW = "password";
 const CONFIRM_PW = "confirm_password";
 
 export const useSignUp = () => {
-  const { control, handleSubmit, setValue, getValues } = useForm();
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+    getValues,
+  } = useForm();
   const createReg = createControlledReg(control);
 
   const reg = {
@@ -46,7 +51,8 @@ export const useSignUp = () => {
     }),
     confirmPassword: createReg(CONFIRM_PW, {
       validate: {
-        isRequired: (val: string) => getValues(PW) === val || "비밀번호가 일치하지 않았습니다.",
+        isRequired: (val: string) => isRequired(val) || "비밀번호 확인을 해야 합니다.",
+        isConsistent: (val: string) => getValues(PW) === val || "비밀번호가 일치하지 않았습니다.",
       },
     }),
   };
@@ -55,5 +61,5 @@ export const useSignUp = () => {
     console.log(data);
   });
 
-  return { reg, onSubmit };
+  return { reg, errors, onSubmit };
 };

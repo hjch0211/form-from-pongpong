@@ -1,2 +1,2 @@
-type Props = Object & { length: number };
-export const isEmpty = (obj: Props) => obj.length === 0;
+type Props = Object;
+export const isEmpty = (obj: Props) => Object.keys(obj).length === 0;
