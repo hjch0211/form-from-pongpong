@@ -18,9 +18,9 @@ const Main = ({ children }: Props) => {
 
   return (
     <Layout>
-      <Empty height="2rem" />
+      <Empty height="1rem" />
       {!!TitleComponenets && TitleComponenets}
-      <Empty height="3rem" />
+      <Empty height="1.5rem" />
       {isEmpty(arrayBodyComponenets) || arrayBodyComponenets}
     </Layout>
   );

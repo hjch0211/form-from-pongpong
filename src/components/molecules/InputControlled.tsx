@@ -1,7 +1,7 @@
 import { TextField, TextFieldProps } from "@mui/material";
 import { useController, UseControllerProps } from "react-hook-form";
 
-type ControlledMuiProps = TextFieldProps & { useControllerProps: UseControllerProps };
+export type ControlledMuiProps = TextFieldProps & { useControllerProps: UseControllerProps };
 
 /**
  * @description
