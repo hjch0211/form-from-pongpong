@@ -1,8 +1,9 @@
 import React from "react";
 import { MainHeader } from "../../../components/organisms";
 import { MainLayout } from "../../../components/templates/MainLayout";
-import { Typography, Autocomplete, Box, TextField } from "@mui/material";
-import { InputControlled as Input } from "../../../components/molecules";
+import { Typography, Box, TextField } from "@mui/material";
+import { TextFieldControlled as Input } from "../../../components/molecules";
+import { AutoCompleteControlled } from "../../../components/molecules";
 import { useSignUp } from "./hook";
 import { Empty, Form } from "../../../components/atoms";
 import { SubmitBtn, PwField, InputMulti } from "../../../components/molecules";
@@ -32,11 +33,15 @@ export const SignUp = () => {
           <Form onSubmit={onSubmit}>
             <Input fullWidth label="NAME" useControllerProps={reg.name} />
             <Empty height="2rem" />
-            <div style={{ display: "flex", width: "100%", alignItems: "center" }}>
-              <Input label="ID" useControllerProps={reg.id} />
+            <InputMulti
+              names={[reg.id.name, reg.domain.name]}
+              errors={errors}
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <Input label="ID" useControllerProps={reg.id} disableHelperText />
               &nbsp;@&nbsp;
-              {/* [Todo] reg 등록 필요 */}
-              <Autocomplete
+              <AutoCompleteControlled
+                useControllerProps={reg.domain}
                 sx={{ width: "50%" }}
                 freeSolo
                 options={DOMAINS}
@@ -48,7 +53,7 @@ export const SignUp = () => {
                 disableClearable
                 renderInput={(params) => <TextField {...params} label="DOMAIN" />}
               />
-            </div>
+            </InputMulti>
             <Empty height="2rem" />
             <InputMulti
               names={[reg.password.name, reg.confirmPassword.name]}

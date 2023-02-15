@@ -27,5 +27,6 @@ export const AutoCompleteControlled = <
 }: ControlledAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>) => {
   const { field } = useController(useControllerProps);
 
+  // [Todo] error에 맞게 컬러 변경되게 하기
   return <Autocomplete {...field} {...props} />;
 };

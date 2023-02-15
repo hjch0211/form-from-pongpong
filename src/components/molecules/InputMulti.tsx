@@ -14,7 +14,7 @@ type Props<TFieldValues extends FieldValues = FieldValues> = React.DetailedHTMLP
 
 export const InputMulti = ({ errors, names, children, ...props }: Props) => {
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <div {...props}>{children}</div>
       {/* [Todo] 헬퍼 텍스트의 위치가 다른 Input과 잘 안 맞음 */}
       <FormHelperText error={!isEmpty(errors)}>

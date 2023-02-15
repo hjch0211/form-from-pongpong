@@ -1,6 +1,6 @@
 import React from "react";
 import { InputAdornment, IconButton } from "@mui/material";
-import { InputControlled as Input } from "../../../../components/molecules";
+import { TextFieldControlled as Input } from "../../../../components/molecules";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { UseFormSetValue, FieldValues, UseControllerProps } from "react-hook-form";
 
