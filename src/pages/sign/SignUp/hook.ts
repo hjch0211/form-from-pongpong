@@ -21,6 +21,7 @@ export const useSignUp = () => {
     handleSubmit,
     formState: { errors },
     getValues,
+    trigger,
   } = useForm();
   const createReg = createControlledReg(control);
 
@@ -61,5 +62,9 @@ export const useSignUp = () => {
     console.log(data);
   });
 
-  return { reg, errors, onSubmit };
+  const validateStepAuth = () => {
+    trigger([NAME, ID, DOMAIN, PW, CONFIRM_PW]);
+  };
+
+  return { reg, errors, onSubmit, validateStepAuth };
 };

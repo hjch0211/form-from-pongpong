@@ -5,10 +5,8 @@ import { MainHeader } from "../../../components/organisms";
 import { Button, Typography, Stack, Divider } from "@mui/material";
 import { useSignIn } from "./hook";
 import { IdField, SaveIdCheckBox } from "./components";
-import { SubmitBtn } from "../../../components/molecules";
+import { CtaBtn } from "../../../components/molecules";
 import { PwField } from "../../../components/molecules";
-import { myColor } from "../../../components/constants/myColor";
-import { color } from "@mui/system";
 
 export const SignIn = () => {
   const { reg, onSubmit, setValue, toggleSaveId, navigate } = useSignIn();
@@ -27,7 +25,7 @@ export const SignIn = () => {
             <PwField label="PASSWORD" useControllerProps={reg.password} />
             <SaveIdCheckBox toggleSaveId={toggleSaveId} />
             <Empty height="2rem" />
-            <SubmitBtn>로그인</SubmitBtn>
+            <CtaBtn type="submit">로그인</CtaBtn>
           </Form>
 
           <Empty height="2rem" />
