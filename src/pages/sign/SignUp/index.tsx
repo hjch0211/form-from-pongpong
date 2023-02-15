@@ -23,18 +23,19 @@ export const SignUp = () => {
         <MainLayout.Title>
           <Typography variant="h1">Sign Up</Typography>
         </MainLayout.Title>
+        <MainLayout.SubTitle>
+          <Typography>회원 정보를 입력해주세요.</Typography>
+        </MainLayout.SubTitle>
         <MainLayout.Body>
           {/* 카드 형태로 영역 구분하면 좋을 것 같음 */}
           {/* step1 - step2 -step3 이런 형식 사용 ㄱㄱ */}
-          <Typography>회원 정보를 입력해주세요.</Typography>
-          <Empty height="2rem" />
           <Form onSubmit={onSubmit}>
             <Input fullWidth label="NAME" useControllerProps={reg.name} />
             <Empty height="2rem" />
             <div style={{ display: "flex", width: "100%", alignItems: "center" }}>
               <Input label="ID" useControllerProps={reg.id} />
               &nbsp;@&nbsp;
-              {/* reg 등록 필요 */}
+              {/* [Todo] reg 등록 필요 */}
               <Autocomplete
                 sx={{ width: "50%" }}
                 freeSolo
@@ -54,9 +55,9 @@ export const SignUp = () => {
               errors={errors}
               style={{ display: "flex" }}
             >
-              <PwField label="PASSWORD" useControllerProps={reg.password} />
+              <PwField disableHelperText label="PASSWORD" useControllerProps={reg.password} />
               &nbsp;
-              <PwField label="CONFIRM" useControllerProps={reg.confirmPassword} />
+              <PwField disableHelperText label="CONFIRM" useControllerProps={reg.confirmPassword} />
             </InputMulti>
             <Empty height="2rem" />
             <SubmitBtn>회원가입</SubmitBtn>

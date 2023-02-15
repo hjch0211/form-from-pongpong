@@ -16,7 +16,7 @@ const originColor = {
 
 export const myColor = {
   ...originColor,
-  backGround: originColor.grey3,
-  text: originColor.grey1,
+  backGround: originColor.grey1,
+  text: originColor.grey3,
   primary: originColor.lightBlue,
 };

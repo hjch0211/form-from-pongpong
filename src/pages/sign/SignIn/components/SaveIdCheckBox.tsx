@@ -12,11 +12,7 @@ export const SaveIdCheckBox = ({ toggleSaveId }: Prop) => {
     <div style={{ width: "100%", display: "flex", justifyContent: "right" }}>
       <FormControlLabel
         control={<Checkbox onClick={() => toggleSaveId()} />}
-        label={
-          <Typography color="lightgray" variant="body2">
-            ID 저장
-          </Typography>
-        }
+        label={<Typography variant="body2">ID 저장</Typography>}
       />
     </div>
   );
