@@ -1,9 +1,9 @@
 import React from "react";
 import { InputAdornment, IconButton } from "@mui/material";
-import { InputControlled as Input } from "./InputControlled";
+import { TextFieldControlled as Input } from "./controlledComponents/TextFieldControlled";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { ControlledMuiProps } from "./InputControlled";
+import { ControlledMuiProps } from "./controlledComponents/TextFieldControlled";
 
 export const PwField = ({ useControllerProps, ...props }: ControlledMuiProps) => {
   const [isMouseEnter, setIsMouseEnter] = React.useState(false);

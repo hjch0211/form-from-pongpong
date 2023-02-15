@@ -8,9 +8,9 @@ export type ControlledMuiProps = TextFieldProps & {
 
 /**
  * @description
- * 제어 컴포넌트를 위해 useController를 이용해 Input 생성
+ * 제어 컴포넌트를 위해 useController를 이용해 TextField 생성
  */
-export const InputControlled = ({
+export const TextFieldControlled = ({
   useControllerProps,
   disableHelperText = false,
   ...props
